@@ -1,0 +1,10 @@
+name = "sotepedia-heart"
+main = "heart.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+routes = [{ pattern = "sp-heart.gombly.uk", custom_domain = true }]
+
+# Namespace "sotepedia-hearts". Holds one key: count.
+[[kv_namespaces]]
+binding = "HEARTS"
+id = "fff3b6d289c240de91e4e4529005e704"

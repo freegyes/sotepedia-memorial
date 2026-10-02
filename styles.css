@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Consolas', 'Monaco', 'Lucida Console', 'Courier New', monospace;
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.logo {
+    display: block;
+    /* Grows with the window so the heart count ends at the bottom edge on desktop.
+       672px is everything on the page except the logo, at desktop widths.
+       Capped at 150px, the logo file's own size, so it never blurs. */
+    height: clamp(60px, calc(100vh - 672px), 150px);
+    width: auto;
+    max-width: 100%;
+    margin: 5px auto 15px;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 12px 0;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    color: #666;
+}
+
+.message p {
+    margin-bottom: 1em;
+}
+
+.message p.lead {
+    font-weight: bold;
+    color: #444;
+}
+
+.language-flag {
+    text-align: center;
+    display: block;
+    margin-top: 8px;
+    font-size: 19px;
+}
+
+
+@media (min-width: 768px) {
+    .messages {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .message {
+        width: 48%;
+    }
+}
+
+.heart-container {
+    text-align: center;
+}
+
+.heart-button {
+    font-size: 25px;
+    color: #ff9aa2;
+    border: none;
+    background-color: #fafafa;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.heart-button:hover {
+    transform: scale(1.2);
+    transition: transform 1s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1.2); }
+    50% { transform: scale(1.7); }
+    100% { transform: scale(1.2); }
+}
+
+.heart-button.pulse {
+    animation: pulse 1s ease;
+}
+
+.heart-count {
+    font-size: 13px;
+    min-height: 1.5em;
+}
+
+.heart-count.given {
+    color: #21ca98;
+}
+
+.signature {
+    text-align: right;
+    font-size: 13px;
+    margin: 0 0 4px;
+}
+
+.signature a {
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+}
