@@ -6,8 +6,8 @@ const HEART_ENDPOINT = 'https://sp-heart.gombly.uk';
 document.addEventListener('DOMContentLoaded', function () {
     const button = document.getElementById('heartButton');
     const countEl = document.getElementById('heartCount');
-    const colours = ['#E63946', '#DB2763', '#F76D6D', '#D36D88', '#2A5A7A', '#4A7FA8'];
-    const backgrounds = ['#FFE0E9', '#FFD6E8', '#FFECDD', '#DCEBEB', '#E3EEF6'];
+    const colours = ['#364E96', '#3C5496', '#4E66A8', '#5A72AE', '#6C84BA'];
+    const backgrounds = ['#E3E9F5', '#EAEFF8', '#DDE5F3', '#F0F3FA', '#E6ECF7'];
 
     function pick(list) {
         return list[Math.floor(Math.random() * list.length)];

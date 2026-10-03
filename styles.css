@@ -74,15 +74,25 @@ body, html {
 }
 
 .heart-button {
-    font-size: 25px;
-    color: #ff9aa2;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #7890c6;
     border: none;
     background-color: #fafafa;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 0;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.2s;
+}
+
+.heart-button svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
 }
 
 .heart-button:hover {
@@ -106,7 +116,7 @@ body, html {
 }
 
 .heart-count.given {
-    color: #21ca98;
+    color: #3c5496;
 }
 
 .signature {
